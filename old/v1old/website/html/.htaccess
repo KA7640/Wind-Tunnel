@@ -1,2 +1,0 @@
-AuthName "SRTS Oakland Login"
-AuthUserFile "/home/mfitznet/.htpasswds/srts.mfitz.net/v1/website/html/passwd"

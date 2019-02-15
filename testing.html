@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 26px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button2 {background-color: #008CBA;} /* Blue */
+    .button3 {background-color: #f44336;} /* Red */
+    .button4 {background-color: #e7e7e7; color: black;} /* Gray */
+    .button5 {background-color: #555555;} /* Black */
+</style>
+
+
+<body style="height: 100%;">
+<div style="height: 100%;">
+    <div class="mySlides" style="height: 100%;">
+        <div style="background-color: #0e1220; height: 100%;" align="center"><br><h1 style="color:white;">Open the
+            door:</h1><br><img src="images/openingDoor.GIF" height="203"><br><br><br>
+            <button class="button button3" onclick="plusDivs(-1)"><div style="color: white;">Back</div></button>
+            <button class="button button3" onclick="plusDivs(1)"><div style="color: white;">Next</div></button>
+        </div>
+
+    </div>
+    <div class="mySlides" style="height: 100%;">
+        <div style="background-color: #0e1220; height: 100%;" align="center"><br><h1 style="color:white;">Lower the
+            turbine:</h1><br><img src="images/rotateTurbine.gif"><br><br><br>
+            <button class="button button3" onclick="plusDivs(-1)"><div style="color: white;">Back</div></button>
+            <button class="button button3" onclick="plusDivs(1)"><div style="color: white;">Next</div></button>
+        </div>
+
+    </div>
+    <div class="mySlides" style="height: 100%;">
+        <div style="background-color: #0e1220; height: 100%;" align="center"><br><h1 style="color:white;">Remove the blades
+            from the turbine:</h1><br><img src="images/removeBlades.gif"><br><br><br>
+            <button class="button button3" onclick="plusDivs(-1)"><div style="color: white;">Back</div></button>
+            <button class="button button3" onclick="plusDivs(1)"><div style="color: white;">Next</div></button>
+        </div>
+
+    </div>
+    <div class="mySlides" style="height: 100%;">
+        <div style="background-color: #0e1220; height: 100%;" align="center"><br><h1 style="color:white;">Add the new
+            blades:</h1><br><img src="images/newBlades.gif"><br><br><br>
+            <button class="button button3" onclick="plusDivs(-1)"><div style="color: white;">Back</div></button>
+            <button class="button button3" onclick="plusDivs(1)"><div style="color: white;">Next</div></button>
+        </div>
+
+    </div>
+    <div class="mySlides" style="height: 100%;">
+        <div style="background-color: #0e1220; height: 100%;" align="center"><br><h1 style="color:white;">Rotate the turbine
+            back to its place:</h1><br><img src="images/retotatingBack.gif"><br><br><br>
+            <button class="button button3" onclick="plusDivs(-1)"><div style="color: white;">Back</div></button>
+            <button class="button button3" onclick="plusDivs(1)"><div style="color: white;">Next</div></button>
+        </div>
+
+    </div>
+    <div align="center">
+
+    </div>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+</body>
+</html>
